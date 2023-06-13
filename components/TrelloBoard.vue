@@ -37,10 +37,13 @@ const columns = ref<Column[]>([
       :key="column.id"
       class="column p-5 rounded min-w-[250px] bg-gray-200"
     >
-      <header>
+      <header class="font-bold mb-4">
         {{ column.title }}
       </header>
       <TrelloBoardTask v-for="task in column.tasks" :task="task" />
+      <footer>
+        <button class="text-gray-500">+ Add a Card</button>
+      </footer>
     </div>
   </div>
 </template>
