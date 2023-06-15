@@ -54,9 +54,13 @@ const alt = useKeyModifier("Alt");
             handle=".drag-handle"
             item-key="id"
             :animation="150"
-            ><template #item="{ element: task }: { element: Task }"
-              ><TrelloBoardTask :task="task" /></template
-          ></draggable>
+          >
+            <template #item="{ element: task }: { element: Task }">
+              <div>
+                <TrelloBoardTask :task="task" />
+              </div>
+            </template>
+          </draggable>
 
           <footer>
             <button class="text-gray-500">+ Add a Card</button>
