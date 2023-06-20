@@ -15,7 +15,7 @@ onKeyStroke("Backspace", (e) => {
 
 <template>
   <div
-    :title="task.createdAt.toLocaleDateString()"
+    :title="task.createdAt.toLocaleString()"
     class="task bg-white p-2 mb-2 rounded shadow-sm max-w-[250px] flex"
     @focus="focused = true"
     @blur="focused = false"
